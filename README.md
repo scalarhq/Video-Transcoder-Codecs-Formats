@@ -27,6 +27,9 @@ module.exports = {
 }
 ```
 **If the formats are not updated with codec, they will not be displayed**
+
+*The codec object name will be the file name you gave, that is if you name your file h264.js, the object will be name H264*
+
 ```
 // Formats Example
 module.exports = CODEC_TYPES => ({

@@ -1,0 +1,19 @@
+{
+  "name": "video-transcoder-codecs",
+  "version": "1.0.0",
+  "description": "Codecs for Video-Transcoder",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mozilla-Open-Lab-Etwas/Video-Transcoder-Codecs.git"
+  },
+  "author": "Zack Radisic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mozilla-Open-Lab-Etwas/Video-Transcoder-Codecs/issues"
+  },
+  "homepage": "https://github.com/Mozilla-Open-Lab-Etwas/Video-Transcoder-Codecs#readme"
+}

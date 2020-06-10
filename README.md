@@ -1,8 +1,8 @@
 # Video Transcoder Codec and Formats Support
 
-This is a contributation repository for the [Wasm Video Transcoder](https://github.com/Mozilla-Open-Lab-Etwas/Video-Transcoder) at https://videotranscode.space/
+This is a contribution repository for the [Wasm Video Transcoder](https://github.com/Mozilla-Open-Lab-Etwas/Video-Transcoder) at https://videotranscode.space/
 
-We encourage users to submit codecs and format for review using pull requests, please follow the requirements below and if its passes the automated tests we will add it to the main product in the next build
+We encourage users to submit codecs and formats for review using pull requests, please follow the requirements below and if it passes the automated tests we will add it to the main product in the next build.
 
 ## Adding Codecs
 
@@ -28,7 +28,7 @@ module.exports = {
 ```
 **If the formats are not updated with codec, they will not be displayed**
 
-*The codec object name will be the file name you gave, that is if you name your file h264.js, the object will be name H264*
+*The codec object name will be the file name you gave, that is if you name your file h264.js, the object will be named H264*
 
 ```
 // Formats Example

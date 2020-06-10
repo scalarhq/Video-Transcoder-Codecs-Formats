@@ -1,5 +1,7 @@
+const fs = require('fs')
+const path = require('path')
 
-const DIR_NAME = 'fs'
+const DIR_NAME = 'codecs'
 const CODEC_TYPES = {}
 
 const init = () => {

@@ -1,5 +1,7 @@
+const fs = require('fs')
+const path = require('path')
 
-const DIR_NAME = 'fs'
+const DIR_NAME = 'formats'
 const FORMAT_TYPES = {}
 
 const init = CODEC_TYPES => {
@@ -15,7 +17,7 @@ const init = CODEC_TYPES => {
             if (err) {
                 errs.push(err)
             } else {
-                FORMAT_TYPES[[0]] = e[1]
+                FORMAT_TYPES[e[0]] = e[1]
             }
         })
     
@@ -23,7 +25,7 @@ const init = CODEC_TYPES => {
 }
 
 const validateFormat = (key, format) => {
-    const propNames = ['name', 'extension', 'display', 'type', 'codecs']
+    const propNames = ['name', 'extension', 'display', 'codecs']
     let err
     propNames.forEach(name => {
         if (format[name] === null || format[name] === undefined) err = new Error(`Missing required format property: ${name}`) 
@@ -32,13 +34,13 @@ const validateFormat = (key, format) => {
     if (err) return err
 
     if (format.extension.charAt(0) !== '.') return new Error('Invalid extension')
-    if (format.display !== true || format.display !== false) return new Error('Invalid value for display')
+    if (format.display !== true && format.display !== false) return new Error('Invalid value for display')
     if (format.codecs.includes(undefined)) return new Error('Invalid codec')
 
-    if (CODEC_TYPES[key]) return new Error(`Format type for: (${key}) already exists`)
+    if (FORMAT_TYPES[key]) return new Error(`Format type for: (${key}) already exists`)
 }
 
 module.exports = CODEC_TYPES => {
-    init(JSON.parse(CODEC_TYPES))
+    init(JSON.parse(CODEC_TYPES.replace('export default ', '')))
     return `export default ${JSON.stringify(FORMAT_TYPES)}`
 }

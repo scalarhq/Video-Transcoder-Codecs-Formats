@@ -5,13 +5,10 @@ jobs:
   build-and-test:
     machine:
       image: ubuntu-1604:201903-01
+
     steps:
       - checkout
-      - run: node --version
-      - node/install-packages:
-          cache-path: ~/project/node_modules
-          override-ci-command: npm install
-      - run: npm test
+      - run: docker-compose run wasmVideoTranscoderService
 
 workflows:
   build-and-test:

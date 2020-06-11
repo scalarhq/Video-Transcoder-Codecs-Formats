@@ -26,7 +26,7 @@ module.exports = {
       min: 1,
       max: 51,
     },
-    ffmpegLib: "libx264" // The codec type required by the CLI command.
+    ffmpegLib: "libx264" // The codec library required by the CLI command.
 }
 ```
 **If the formats are not updated with codec, they will not be displayed**

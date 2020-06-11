@@ -8,10 +8,10 @@ jobs:
     steps:
       - checkout
       - run: node --version
-      - node/with-cache:
-          steps:
-            - run: npm install
-            - run: npm test
+      - node/install-packages:
+          cache-path: ~/project/node_modules
+          override-ci-command: npm install
+      - run: npm test
 
 workflows:
   build-and-test:

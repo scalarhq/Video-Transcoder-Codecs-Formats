@@ -3,8 +3,8 @@ orbs:
   node: circleci/node@3.0.0
 jobs:
   build-and-test:
-    executor:
-      name: node/default
+    machine:
+      image: ubuntu-1604:201903-01
     steps:
       - checkout
       - run: node --version

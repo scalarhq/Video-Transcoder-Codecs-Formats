@@ -8,7 +8,7 @@ jobs:
 
     steps:
       - checkout
-      - run: docker-compose wasmVideoTranscoderService
+      - run: docker-compose run wasmVideoTranscoderService
 
 workflows:
   build-and-test:

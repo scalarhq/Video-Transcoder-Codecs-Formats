@@ -1,0 +1,15 @@
+version: "3.1"
+
+services:
+  wasmVideoTranscoderService:
+    # comment this line if you build the image to prevent overwriting the tag
+    image: node:latest
+    # uncomment this line to build rather than pull the image
+    # build: .
+    entrypoint:
+      - /bin/sh
+      - ./dockerEntry.sh
+    volumes:
+      - $PWD:/opt/codec
+    working_dir: /opt/codec
+    network_mode: "none"

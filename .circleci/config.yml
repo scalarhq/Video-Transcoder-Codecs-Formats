@@ -8,13 +8,7 @@ jobs:
 
     steps:
       - checkout
-      - run: docker pull node:latest
-      - run: docker run -it  -v $PWD:/src node:latest
-      - run: docker exec node --version
-      - node/install-packages:
-          cache-path: ~/project/node_modules
-          override-ci-command: docker exec npm install
-      - run: docker exec npm test
+      - run: docker-compose wasmVideoTranscoderService
 
 workflows:
   build-and-test:

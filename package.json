@@ -4,7 +4,7 @@
   "description": "Codecs for Video-Transcoder",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "node --experimental-wasm-threads --experimental-wasm-bulk-memory ./node_modules/.bin/jest  --runInBand --verbose --forceExit"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,8 @@
   "homepage": "https://github.com/Mozilla-Open-Lab-Etwas/Video-Transcoder-Codecs#readme",
   "devDependencies": {
     "jest": "^26.0.1"
+  },
+  "dependencies": {
+    "@ffmpeg/ffmpeg": "^0.8.3"
   }
 }

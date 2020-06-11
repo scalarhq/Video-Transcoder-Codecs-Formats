@@ -5,8 +5,12 @@ jobs:
   build-and-test:
     machine:
       image: ubuntu-1604:201903-01
+
     steps:
       - checkout
+      - run: curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+      - run: sudo apt install nodejs
+      - run: sudo apt install build-essential
       - run: node --version
       - node/install-packages:
           cache-path: ~/project/node_modules

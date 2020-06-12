@@ -1,6 +1,7 @@
 # Video Transcoder Codec and Formats Support
 
 [![Mozilla-Open-Lab-Etwas](https://circleci.com/gh/Mozilla-Open-Lab-Etwas/Video-Transcoder-Codecs-Formats.svg?style=svg)](https://app.circleci.com/pipelines/github/Mozilla-Open-Lab-Etwas/Video-Transcoder-Codecs-Formats)
+![Node.js CI](https://github.com/Mozilla-Open-Lab-Etwas/Video-Transcoder-Codecs-Formats/workflows/Node.js%20CI/badge.svg)
 
 
 This is a repository meant for contribution to the [Wasm Video Transcoder](https://github.com/Mozilla-Open-Lab-Etwas/Video-Transcoder) project at https://videotranscode.space/

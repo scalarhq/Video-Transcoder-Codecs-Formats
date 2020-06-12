@@ -3,5 +3,5 @@ module.exports = CODEC_TYPES => ({
     extension: ".avi",
     display: false,
     defaultCodec: CODEC_TYPES.H264,
-    codecs: [CODEC_TYPES.H264, CODEC_TYPES.MPEG4, CODEC_TYPES.VP9],
+    codecs: [CODEC_TYPES.H264, CODEC_TYPES.MPEG4],
 })

@@ -8,7 +8,7 @@ module.exports = () => ({
     return null;
   },
   load(id) {
-    if (id === "codecs") return JSON.stringify(codecs.CODEC_TYPES);
+    if (id === "codecs") return JSON.stringify(codecs);
     if (id === "formats") return JSON.stringify(formats(codecs.CODEC_TYPES));
     return null;
   },

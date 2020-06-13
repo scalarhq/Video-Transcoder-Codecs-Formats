@@ -1,11 +1,13 @@
 const fs = require("fs");
 const path = require("path");
 const codecs = require("./codecs");
+var exports = (module.exports = {});
 
 const DIR_NAME = "formats";
 const FORMAT_TYPES = {};
 
 const init = (CODEC_TYPES) => {
+  console.log(CODEC_TYPES);
   const errs = [];
   fs.readdirSync(path.join(__dirname, DIR_NAME))
     .filter(
@@ -54,7 +56,6 @@ const validateFormat = (key, format) => {
     return new Error(`Format type for: (${key}) already exists`);
 };
 
-module.exports = () => {
-  init(codecs.CODEC_TYPES);
-  return FORMAT_TYPES;
-};
+init(codecs.CODEC_TYPES);
+
+exports.FORMAT_TYPES = FORMAT_TYPES;

@@ -7,9 +7,10 @@ const { createFFmpeg } = require("@ffmpeg/ffmpeg");
 const ffmpeg = createFFmpeg({ log: false });
 
 const codecs = require("../codecs").CODEC_TYPES;
-const formats = require("../formats");
+//console.log(codecs);
+const formats = require("../formats").FORMAT_TYPES;
 
-//console.log(JSON.stringify(formats));
+//console.info(JSON.stringify(formats));
 let count = 0;
 
 const formatsList = Object.keys(formats).map((key) => {

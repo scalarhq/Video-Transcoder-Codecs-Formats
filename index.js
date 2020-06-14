@@ -1,15 +1,3 @@
-const codecs = require("./codecs");
-const formats = require("./formats");
+const plugin = require("./lib/plugin.js");
 
-module.exports = () => ({
-  name: "video-transcoder-codecs-formats",
-  resolveId(source) {
-    if (source === "codecs" || source === "formats") return source;
-    return null;
-  },
-  load(id) {
-    if (id === "codecs") return JSON.stringify(codecs);
-    if (id === "formats") return JSON.stringify(formats);
-    return null;
-  },
-});
+module.exports = plugin;

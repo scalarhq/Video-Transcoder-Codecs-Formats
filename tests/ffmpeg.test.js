@@ -6,10 +6,11 @@ const { createFFmpeg } = require("@ffmpeg/ffmpeg");
 
 const ffmpeg = createFFmpeg({ log: false });
 
-const codecs = require("../src/codecs").CODEC_TYPES;
-const formats = require("../src/formats");
+const codecs = require("../src/codecs");
+const formats = require("../src/formats").default;
 
-//console.info(JSON.stringify(formats));
+// console.info("Codecs imported", JSON.stringify(codecs));
+// console.info("Formats imported", JSON.stringify(formats));
 let count = 0;
 
 const formatsList = Object.keys(formats).map((key) => {
@@ -39,7 +40,12 @@ describe("FFmpeg Testing", () => {
   });
   describe("Automated Format and Codec Testing", () => {
     formatsList.forEach(({ type, name, extension, defaultCodec, codecs }) => {
+      console.info(formatsList);
       describe(`Testing Format ${type}`, () => {
+        console.info(codecs);
+        it("Has Codecs", () => {
+          expect(codecs).toBeDefined();
+        });
         codecs.forEach((codec) => {
           if (!codec.notSupported) {
             it(`Testing Codec ${codec.name} with format ${type}`, async () => {

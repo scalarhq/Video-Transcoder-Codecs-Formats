@@ -34,6 +34,8 @@ const init = (CODEC_TYPES) => {
 
   if (errs.length !== 0)
     throw new Error(`Error(s) occurred while parsing: ${errs.join(", ")}`);
+
+  return FORMAT_TYPES;
 };
 
 const validateFormat = (key, format) => {
@@ -55,7 +57,4 @@ const validateFormat = (key, format) => {
     return new Error(`Format type for: (${key}) already exists`);
 };
 
-export default () => {
-  init(codecs.CODEC_TYPES);
-  return FORMAT_TYPES;
-};
+export default init(codecs);

@@ -1,5 +1,5 @@
-import codecs from './codecs'
-import formats from './formats'
+import codecs from "./codecs";
+import formats from "./formats";
 
 export default () => ({
   name: "video-transcoder-codecs-formats",
@@ -9,7 +9,7 @@ export default () => ({
   },
   load(id) {
     if (id === "codecs") return JSON.stringify(codecs.CODEC_TYPES);
-    if (id === "formats") return JSON.stringify(formats(codecs));
+    if (id === "formats") return JSON.stringify(formats);
     return null;
   },
 });

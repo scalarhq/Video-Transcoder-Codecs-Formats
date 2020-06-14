@@ -1,12 +1,10 @@
 const fs = require("fs");
 const path = require("path");
 
-var exports = (module.exports = {});
-
-const DIR_NAME = "codecs";
+const DIR_NAME = "../codecs";
 let CODEC_TYPES = {};
 
-const init = () => {
+export const init = () => {
   const errs = [];
   fs.readdirSync(path.join(__dirname, DIR_NAME))
     .filter(
@@ -36,7 +34,7 @@ const init = () => {
     throw new Error(`Error(s) occurred while parsing: ${errs.join(", ")}`);
 };
 
-const validateCodec = (key, codec) => {
+export const validateCodec = (key, codec) => {
   const propNames = ["name", "compressionRange", "ffmpegLib"];
   let err;
   propNames.forEach((name) => {
@@ -53,18 +51,10 @@ const validateCodec = (key, codec) => {
     return new Error(`Codec type for: (${key}) already exists`);
 };
 
-const deleteCodecTypes = () => {
+export const deleteCodecTypes = () => {
   CODEC_TYPES = {};
 };
 
 init();
 
-exports.CODEC_TYPES = CODEC_TYPES;
-
-// Testing Exports
-
-exports.validateCodec = validateCodec;
-
-exports.init = init;
-
-exports.deleteCodecTypes = deleteCodecTypes;
+export default CODEC_TYPES;

@@ -1,4 +1,4 @@
-const codecs = require("../codecs.js");
+const codecs = require("../src/codecs.js");
 
 describe("Validate Codec Test", () => {
   it("IS Defined", () => {

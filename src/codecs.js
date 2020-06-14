@@ -1,5 +1,5 @@
-const fs = require("fs");
-const path = require("path");
+import fs from "fs";
+import path from "path";
 
 const DIR_NAME = "../codecs";
 let CODEC_TYPES = {};
@@ -58,3 +58,5 @@ export const deleteCodecTypes = () => {
 init();
 
 export default CODEC_TYPES;
+
+//export { validateCodec };

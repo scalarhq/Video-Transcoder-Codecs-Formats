@@ -1,5 +1,6 @@
-const fs = require("fs");
-const path = require("path");
+import fs from "fs";
+import path from "path";
+import codecs from "./codecs";
 
 const DIR_NAME = "../formats";
 const FORMAT_TYPES = {};
@@ -53,7 +54,7 @@ const validateFormat = (key, format) => {
     return new Error(`Format type for: (${key}) already exists`);
 };
 
-export default (CODEC_TYPES) => {
-  init(CODEC_TYPES);
+export default () => {
+  init(codecs.CODEC_TYPES);
   return FORMAT_TYPES;
 };

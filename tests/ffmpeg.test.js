@@ -6,8 +6,8 @@ const { createFFmpeg } = require("@ffmpeg/ffmpeg");
 
 const ffmpeg = createFFmpeg({ log: false });
 
-const codecs = require("../codecs").CODEC_TYPES;
-const formats = require("../formats")(codecs);
+const codecs = require("../src/codecs").CODEC_TYPES;
+const formats = require("../src/formats");
 
 //console.log(JSON.stringify(formats));
 let count = 0;

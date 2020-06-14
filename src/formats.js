@@ -55,13 +55,7 @@ const validateFormat = (key, format) => {
     return new Error(`Format type for: (${key}) already exists`);
 };
 
-<<<<<<< HEAD:src/formats.js
 export default () => {
   init(codecs.CODEC_TYPES);
   return FORMAT_TYPES;
 };
-=======
-init(codecs.CODEC_TYPES);
-
-exports.FORMAT_TYPES = FORMAT_TYPES;
->>>>>>> master:formats.js

@@ -6,6 +6,7 @@ const DIR_NAME = "../formats";
 const FORMAT_TYPES = {};
 
 const init = (CODEC_TYPES) => {
+  console.log(CODEC_TYPES);
   const errs = [];
   fs.readdirSync(path.join(__dirname, DIR_NAME))
     .filter(
@@ -54,7 +55,13 @@ const validateFormat = (key, format) => {
     return new Error(`Format type for: (${key}) already exists`);
 };
 
+<<<<<<< HEAD:src/formats.js
 export default () => {
   init(codecs.CODEC_TYPES);
   return FORMAT_TYPES;
 };
+=======
+init(codecs.CODEC_TYPES);
+
+exports.FORMAT_TYPES = FORMAT_TYPES;
+>>>>>>> master:formats.js

@@ -8,8 +8,8 @@ export default () => ({
     return null;
   },
   load(id) {
-    if (id === "codecs") return JSON.stringify(codecs);
-    if (id === "formats") return JSON.stringify(formats);
+    if (id === "codecs") return `export default ${JSON.stringify(codecs)}`;
+    if (id === "formats") return `export default ${JSON.stringify(formats)}`;
     return null;
   },
 });

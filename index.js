@@ -1,3 +1,3 @@
-const plugin = require("./lib/babel-plugin.js");
+const plugin = require("./lib/rollup-plugin");
 
-module.exports = plugin
+module.exports = plugin;

@@ -1,1 +1,0 @@
-{"version":3,"sources":["../src/test.js"],"names":["console","log"],"mappings":";;AAAA;;;;AAGAA,OAAO,CAACC,GAAR,CAAY,OAAZ;AAEAD,OAAO,CAACC,GAAR,CAAY,qCAAZ","sourcesContent":["import codecs from 'codecs'\n\n\nconsole.log('oooga')\n\nconsole.log('sdfsdfsdfssdfsdfdssdfssdfsdfsfdfsdf')\n\n"],"file":"test.js"}

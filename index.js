@@ -1,3 +1,3 @@
-const plugin = require("./lib/plugin.js");
+const rollupPlugin = require("./lib/plugin.js");
 
-module.exports = plugin;
+module.exports = rollupPlugin

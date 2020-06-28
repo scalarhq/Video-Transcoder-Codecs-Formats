@@ -6,7 +6,6 @@ const DIR_NAME = "../formats";
 const FORMAT_TYPES = {};
 
 const init = (CODEC_TYPES) => {
-  console.log(CODEC_TYPES);
   const errs = [];
   fs.readdirSync(path.join(__dirname, DIR_NAME))
     .filter(

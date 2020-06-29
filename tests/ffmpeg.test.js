@@ -80,10 +80,11 @@ describe("FFmpeg Testing", () => {
                 expect(codec.ffmpegLib).toBeDefined();
                 expect(extension).toBeDefined();
                 expect(type).toBeDefined();
-                const { min, max } = codec;
+                const { min, max } = codec.compressionRange;
                 const compression = `-crf ${
                   Math.floor(Math.random() * (max - min)) + min
                 }`;
+                console.info("Compression", compression);
                 const output = `output${extension}`;
                 try {
                   await ffmpeg.run(

@@ -11,6 +11,9 @@
     "type": "git",
     "url": "git+https://github.com/Mozilla-Open-Lab-Etwas/Video-Transcoder-Codecs.git"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "author": "Zack Radisic",
   "license": "ISC",
   "bugs": {
